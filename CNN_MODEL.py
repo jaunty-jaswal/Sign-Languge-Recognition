@@ -90,15 +90,13 @@ x_tr=np.array(x_tr)
 
 print(np.shape(y_test))
 model_CNN = tf.keras.models.Sequential([
-     tf.keras.layers.Conv1D(filters = 32, kernel_size = 5, strides = 1, activations ="relu" . input_shape=x_train.shape[1:3]),
+     tf.keras.layers.Conv1D(filters = 32, kernel_size = 5, strides = 1, activations ="relu" ,input_shape=x_train.shape[1:3]),
      tf.keras.layers.MaxPooling1D(pool_size =2),
      tf.keras.layers.Conv1D(filters = 64,kernel_size=5,strides = 1, activation= "relu"),
-     tf.keras.layers.MaxPooling1D (pool_size =2,
-
+     tf.keras.layers.MaxPooling1D (pool_size =2),
      tf.keras.layers.Conv1D(filters = 128, kernel_size=5,strides = 1, activation= "relu"),
      tf.keras.layers.MaxPooling1D(pool_size =2),
      tf.keras.layers.Dropout(rate = 0.3),
-     #flattern to feed into CNN
      tf.keras.layers.Flatten(),
      tf.keras.layers.Dense(512,activation='relu'),
      tf.keras.layers.Dense(26, activation ='softmax')])
@@ -109,15 +107,13 @@ model_CNN.fit(x_tr,y_tr,batch_size=32,epochs=100)
 
 
 model_CNN = tf.keras.models.Sequential([
-     tf.keras.layers.Conv1D(filters = 32, kernel_size = 5, strides = 1, activations ="relu" . input_shape=x_train.shape[1:3]),
+     tf.keras.layers.Conv1D(filters = 32, kernel_size = 5, strides = 1, activations ="relu" ,input_shape=x_train.shape[1:3]),
      tf.keras.layers.MaxPooling1D(pool_size =2),
      tf.keras.layers.Conv1D(filters = 64,kernel_size=5,strides = 1, activation= "relu"),
-     tf.keras.layers.MaxPooling1D(pool_size =2,
-
+     tf.keras.layers.MaxPooling1D(pool_size =2),
      tf.keras.layers.Conv1D(filters = 128, kernel_size=5,strides = 1, activation= "relu"),
      tf.keras.layers.MaxPooling1D(pool_size =2),
      tf.keras.layers.Dropout(rate = 0.3),
-     #flattern to feed into CNN
      tf.keras.layers.Flatten(),
      tf.keras.layers.Dense(512,activation='relu'),
      tf.keras.layers.Dense(26, activation ='softmax')])
